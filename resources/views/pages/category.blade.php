@@ -80,7 +80,7 @@
             </ul>
         </div>
 
-        <!-- Competition Category -->
+        {{-- <!-- Competition Category -->
         <div class="space-y-6">
             <div class="flex items-center gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 text-red-600">
@@ -133,7 +133,7 @@
                     </li>
                 @endforelse
             </ul>
-        </div>
+        </div> --}}
 
     </div>
 

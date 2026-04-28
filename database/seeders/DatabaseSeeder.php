@@ -87,7 +87,7 @@ class DatabaseSeeder extends Seeder
                     <ul>
                         <li>Wuxi University of Technology</li>
                         <li>Jakarta Global University</li>
-                        <li>China Industry <span class="note">(Need Recommendation)</span></li>
+                        <li>China Industry</li>
                     </ul>
                 </span>
                 <h1 class="text-gray-800 font-semibold text-base xl:text-xl flex items-center gap-2 my-3">
