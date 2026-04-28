@@ -28,7 +28,7 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         Maintenance::create([
-            'is_active' => true,
+            'is_active' => false,
             'created_at' => now()
         ]);
 
@@ -36,7 +36,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'Admin Jakarta Global University',
             'email' => 'inspira@jgu.ac.id',
             'email_verified_at' => now(),
-            'password' => Hash::make('itic@inspira'),
+            'password' => Hash::make('12345'),
             'created_at' => now()
         ]);
 
@@ -60,140 +60,116 @@ class DatabaseSeeder extends Seeder
 
         About::insert([
             'cover' => 'images/inspira-red.png',
-            'content' => 'is a premier academic platform organized by Jakarta Global University (JGU) that brings together emerging researchers, scholars, and innovators to showcase their ideas and insights in the fields of science, technology, business, and health. Under the theme “International Forum on Innovation, Strategy, and Presentation of Research title," this event aims to foster interdisciplinary collaboration, spark future-oriented thinking, and strengthen the research culture among the academic community. Through a dynamic combination of strategic forums, keynote lectures, and a competitive poster presentation, JGU INSPIRA serves as a catalyst for knowledge exchange, academic excellence, and impactful innovation aligned with global challenges and sustainable development goals (SDGs).',
+            'content' => 'is a premier academic platform organized by Jakarta Global University (JGU) and Wuxi University of Technology (WXUT) that brings together emerging researchers, scholars, and innovators to showcase their ideas and insights in the fields of science, technology, business, and health. Under the theme “International Forum on Innovation, Strategy, and Presentation of Research Activity," this event aims to foster interdisciplinary collaboration, spark future-oriented thinking, and strengthen the research culture among the academic community. Through a dynamic combination of strategic forums, keynote lectures, and a competitive poster presentation, JGU-WXUT INSPIRA 2026 serves as a catalyst for knowledge exchange, academic excellence, and impactful innovation aligned with global challenges and sustainable development goals (SDGs).',
             'highlights' => json_encode([
-                'International Strategic Forum',
-                'International Oral Presentation & Poster Competition',
+                'Strategic Forum',
+                'Discipline-Based Seminars (Parallel Sessions)',
             ]),
-            'venue' => 'Jakarta Global University Ballroom | October 20-22 2025',
+            'venue' => 'Jakarta Global University Ballroom | Wednesday, October 28, 2026',
         ]);
 
         Agenda::insert([
             [
-                'description' => 'The highlight agenda is the <b>Strategic Forum titled "Strengthening the Triple Helix for Sustainable Growth and Innovation"</b>, which brings together thought leaders from academia, industry, and government. This forum aims to reinforce collaboration among key stakeholders in building a sustainable innovation ecosystem. Through panel discussions, interactive sessions, and the exchange of best practices, the forum will explore strategic pathways to drive knowledge- and technology-based economic development.',
+                'description' => '<h1 class="text-gray-800 font-semibold text-base xl:text-xl flex items-center gap-2 mb-3">
+                    1. Strategic Forum
+                </h1>
+                <span>
+                    The highlight agenda is the <b>Strategic Forum titled "Bridging engineering, business, and
+                        pharmaceutical expertise to advance technological innovation for global impact"</b>, which
+                    brings together thought leaders from academia, industry, and government. This forum aims to
+                    reinforce
+                    collaboration among key stakeholders in building a sustainable innovation ecosystem. Through
+                    panel discussions, interactive sessions, and the exchange of best practices, the forum will
+                    explore strategic pathways to drive knowledge- and technology-based economic development.
+                </span>
+                <span class="text-center">
+                    <h3><b><u>Keynote Speaker:</u></b></h3>
+                    <ul>
+                        <li>Wuxi University of Technology</li>
+                        <li>Jakarta Global University</li>
+                        <li>China Industry <span class="note">(Need Recommendation)</span></li>
+                    </ul>
+                </span>
+                <h1 class="text-gray-800 font-semibold text-base xl:text-xl flex items-center gap-2 my-3">
+                    2. Discipline-Based Seminars (Parallel Sessions)
+                </h1>
+                <span>
+                    In addition to the strategic forum, the conference features discipline-based seminars conducted in
+                    parallel sessions. These seminars provide a platform for researchers, academics, and practitioners
+                    to present their latest research findings and innovations within their respective fields, including
+                    engineering (mechanical, electrical, industrial, civil, and informatics), business and economics,
+                    and health sciences/pharmacy. Each session encourages scholarly discussion, constructive feedback,
+                    and interdisciplinary exchange, fostering academic rigor and collaboration across diverse areas of
+                    expertise.
+                </span>',
                 'agenda' => '-',
                 'timeline' => '-',
                 'order' => 0
             ],
             [
                 'description' => '-',
-                'agenda' => 'Submission & Payment',
-                'timeline' => 'Now - October 10<sup>th</sup> 2025',
+                'agenda' => 'Abstract Submission Deadline',
+                'timeline' => 'June 30, 2026',
                 'order' => 1
             ],
             [
                 'description' => '-',
-                'agenda' => 'PowerPoint File and Poster Upload Dateline',
-                'timeline' => 'October 10<sup>th</sup> 2025',
+                'agenda' => 'Full Paper Submission Deadline',
+                'timeline' => 'July 31, 2026',
                 'order' => 2
             ],
             [
                 'description' => '-',
-                'agenda' => 'Oral Presentation Competition (Online)',
-                'timeline' => 'October 15-16<sup>th</sup> 2025',
+                'agenda' => 'Notification of Acceptance',
+                'timeline' => 'August 25, 2026',
                 'order' => 3
             ],
             [
                 'description' => '-',
-                'agenda' => 'Poster Competition (Offline)',
-                'timeline' => 'October 21<sup>st</sup> 2025',
+                'agenda' => 'Camera-Ready Submission',
+                'timeline' => 'September 10, 2026',
                 'order' => 4
             ],
             [
                 'description' => '-',
-                'agenda' => 'Announcement & Awards',
-                'timeline' => 'October 22<sup>nd</sup> 2025',
+                'agenda' => 'Early Bird Registration Deadline',
+                'timeline' => 'September 15, 2026',
                 'order' => 5
+            ],
+            [
+                'description' => '-',
+                'agenda' => 'Regular Registration Deadline',
+                'timeline' => 'October 5, 2026',
+                'order' => 6
+            ],
+            [
+                'description' => '-',
+                'agenda' => 'Conference Date',
+                'timeline' => 'October 28, 2026',
+                'order' => 7
             ],
         ]);
 
         Topic::insert([
             [
-                'title' => 'Informatics Engineering',
+                'title' => 'Engineering and Technology',
                 'list' => json_encode([
-                    'Mobile Applications',
-                    'Biomedical Informatics',
-                    'Security Systems',
-                    'Database and Data Mining',
-                    'Artificial Intelligence',
-                    'Computer Network',
-                ]),
-            ],
-            [
-                'title' => 'Industrial Engineering',
-                'list' => json_encode([
-                    'Smart and Lean Manufacturing System',
-                    'Product Design and Development',
-                    'Digitalization Supply Chain',
-                    'Green Manufacturing',
-                    'Quality Management System',
-                ]),
-            ],
-            [
-                'title' => 'Civil Engineering',
-                'list' => json_encode([
-                    'Structure Engineering',
-                    'Road and Bridge Engineering',
-                    'Geotech Engineering',
-                    'Water Resources Management',
-                    'Transportation Engineering',
-                    'Disaster Mitigation',
-                    'Construction Management',
-                    'Earthquake Engineering',
-                ]),
-            ],
-            [
-                'title' => 'Electrical Engineering',
-                'list' => json_encode([
-                    'Power Transmission and Distribution',
-                    'High Voltage Engineering',
-                    'Renewable Energy',
-                    'Smart Grid Technology',
-                    'Robotics',
-                    'Power Electronics',
-                    'Signal and Image Processing',
-                    'Embedded Systems',
-                    'VLSI',
-                    'Wireless and Mobile Communication',
-                ]),
-            ],
-            [
-                'title' => 'Mechanical Engineering',
-                'list' => json_encode([
-                    'Mechatronics & Robotics',
-                    'Applied Mechanics',
-                    'Biomedical Engineering',
-                    'Composite & Materials Engineering',
-                    'Computational Mechanics',
-                    'Design Engineering',
-                    'Thermal & Fluid Science',
+                    'Mobile Applications, Biomedical Informatics, and Security Systems ',
+                    'Database Systems, Data Mining, Artificial Intelligence, and Computer Networks ',
+                    'Smart and Lean Manufacturing Systems, Product Design and Development ',
+                    'Digital Supply Chain, Quality Management, and Green Manufacturing ',
+                    'Structural, Geotechnical, Earthquake, Road and Bridge Engineering ',
+                    'Transportation Engineering, Water Resources, Disaster Mitigation, and Construction Management ',
+                    'Power Systems, High Voltage Engineering, Renewable Energy, and Smart Grid Technology ',
+                    'Robotics, Embedded Systems, VLSI, Signal and Image Processing ',
+                    'Wireless and Mobile Communication Systems ',
+                    'Mechatronics, Applied and Computational Mechanics ',
+                    'Materials Engineering, Design Engineering, Thermal and Fluid Sciences ',
                     'Automotive Engineering',
                 ]),
             ],
             [
-                'title' => 'Management and Digital Business',
-                'list' => json_encode([
-                    'Digital Transformation & Business Strategy',
-                    'E-Commerce & Marketplaces',
-                    'Data, AI & Business Analytics',
-                    'Digital Finance & Emerging Technologies',
-                    'Human Resources & Digital Organizations',
-                    'Digital Marketing',
-                    'Sustainability & Social Responsibility',
-                ]),
-            ],
-            [
-                'title' => 'Pharmaceutical Science',
-                'list' => json_encode([
-                    'Development of Pharmaceutical Formulations, Biotechnology, and Nanotechnology',
-                    'Herbal Innovations and Natural Product Science',
-                    'Computer-Assisted Drug Design and Medicinal Chemistry',
-                    'Pharmacology, Clinical Pharmacy, Drug Safety Monitoring, and Pharmaceutical Practice',
-                    'Pharmaceutical Analysis, Regulatory Compliance, and Quality Assurance',
-                ]),
-            ],
-            /* [
-                'title' => 'Other (Business and Pharmaceutical Science)',
+                'title' => 'Business and Pharmaceutical Sciences',
                 'list' => json_encode([
                     'Business and Entrepreneurship in the Tech Era',
                     'Tech-Driven Business Strategies and Economic Sustainability',
@@ -205,20 +181,20 @@ class DatabaseSeeder extends Seeder
                     'Pharmaceutical formulation, biotechnology, and drug design',
                     'Herbal technology, pharmacology, and regulatory compliance',
                 ]),
-            ], */
+            ],
         ]);
 
         Participant::insert([
             [
-                'title' => 'Researcher & Lecturer',
+                'title' => 'International Participant',
                 'icon' => 'images/icons8-research-64.png',
                 'background' => 'images/back1.jpg'
             ], [
-                'title' => 'College Student & Fresh Graduate (Max. Bachelor)',
+                'title' => 'Researcher & Lecturer',
                 'icon' => 'images/icons8-college-64.png',
                 'background' => 'images/back2.jpg'
             ], [
-                'title' => 'Highschool Student',
+                'title' => 'College & University Student',
                 'icon' => 'images/icons8-book-64.png',
                 'background' => 'images/back3.jpg'
             ],
@@ -405,7 +381,7 @@ class DatabaseSeeder extends Seeder
                 'title' => 'International Participant',
                 'online_fee' => 50,
                 'on_fee_type' => 'USD',
-                'offline_fee' => 50,
+                'offline_fee' => 30,
                 'off_fee_type' => 'USD',
                 'order' => 1
             ],
@@ -418,20 +394,12 @@ class DatabaseSeeder extends Seeder
                 'order' => 2
             ],
             [
-                'title' => 'College Student & Fresh Graduate <br><span class="text-xs text-red-600">(Max. Bachelor)</span>',
-                'online_fee' => 300000,
-                'on_fee_type' => 'IDR',
-                'offline_fee' => 200000,
-                'off_fee_type' => 'IDR',
-                'order' => 3
-            ],
-            [
-                'title' => 'High School Student',
-                'online_fee' => 150000,
+                'title' => 'College & University Student',
+                'online_fee' => 200000,
                 'on_fee_type' => 'IDR',
                 'offline_fee' => 100000,
                 'off_fee_type' => 'IDR',
-                'order' => 4
+                'order' => 3
             ]
         ]);
 

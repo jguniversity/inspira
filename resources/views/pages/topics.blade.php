@@ -11,69 +11,8 @@
 
         <!-- Topics Grid -->
         @if ($topic)
-            <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8">
-                @forelse ($topic->where('id', '<', 4) as $t)
-                    <div class="rounded-2xl overflow-hidden shadow-lg hover:shadow-xl bg-white/90 hover:bg-white backdrop-blur-sm transition transform hover:-translate-y-1">
-                        <!-- Card Header -->
-                        <h3 class="text-xl xl:text-2xl font-bold text-white p-4 
-                                   {{ $t->id % 2 === 0 ? 'bg-gradient-to-r from-red-600 to-red-500' : 'bg-gradient-to-r from-gray-800 to-gray-700' }}">
-                            {{ $t->title }}
-                        </h3>
-                        <!-- Card Body -->
-                        <div class="p-6 text-gray-700">
-                            <ul class="space-y-2 text-gray-700 text-md xl:text-lg">
-                                @foreach ($t->list as $item)
-                                    <li class="flex items-start gap-2"><span class="text-red-400">✔</span> {!! $item !!}</li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    </div>
-                @empty
-                    <!-- Contoh Default Card -->
-                    <div class="rounded-2xl overflow-hidden shadow-lg bg-white/90 backdrop-blur-sm border border-gray-200">
-                        <h3 class="text-xl xl:text-2xl font-bold text-white bg-gradient-to-r from-red-600 to-red-500 p-4">
-                            Lorem Ipsum
-                        </h3>
-                        <ul class="p-6 space-y-2 text-gray-700 text-md xl:text-lg">
-                            <li class="flex items-start gap-2"><span class="text-red-400">✔</span>Lorem Ipsum dolor sit amet </li>
-                            <li class="flex items-start gap-2"><span class="text-red-400">✔</span>Lorem Ipsum dolor sit amet </li>
-                            <li class="flex items-start gap-2"><span class="text-red-400">✔</span>Lorem Ipsum dolor sit amet </li>
-                            <li class="flex items-start gap-2"><span class="text-red-400">✔</span>Lorem Ipsum dolor sit amet </li>
-                            <li class="flex items-start gap-2"><span class="text-red-400">✔</span>Lorem Ipsum dolor sit amet </li>
-                            <li class="flex items-start gap-2"><span class="text-red-400">✔</span>Lorem Ipsum dolor sit amet </li>
-                        </ul>
-                    </div>
-                    <div class="rounded-2xl overflow-hidden shadow-lg bg-white/90 backdrop-blur-sm border border-gray-200">
-                        <h3 class="text-xl xl:text-2xl font-bold text-white bg-gradient-to-r from-gray-800 to-gray-700 p-4">
-                            Lorem Ipsum
-                        </h3>
-                        <ul class="p-6 space-y-2 text-gray-700 text-md xl:text-lg">
-                            <li class="flex items-start gap-2"><span class="text-red-400">✔</span>Lorem Ipsum dolor sit amet </li>
-                            <li class="flex items-start gap-2"><span class="text-red-400">✔</span>Lorem Ipsum dolor sit amet </li>
-                            <li class="flex items-start gap-2"><span class="text-red-400">✔</span>Lorem Ipsum dolor sit amet </li>
-                            <li class="flex items-start gap-2"><span class="text-red-400">✔</span>Lorem Ipsum dolor sit amet </li>
-                            <li class="flex items-start gap-2"><span class="text-red-400">✔</span>Lorem Ipsum dolor sit amet </li>
-                            <li class="flex items-start gap-2"><span class="text-red-400">✔</span>Lorem Ipsum dolor sit amet </li>
-                        </ul>
-                    </div>
-                    <div class="rounded-2xl overflow-hidden shadow-lg bg-white/90 backdrop-blur-sm border border-gray-200">
-                        <h3 class="text-xl xl:text-2xl font-bold text-white bg-gradient-to-r from-red-600 to-red-500 p-4">
-                            Lorem Ipsum
-                        </h3>
-                        <ul class="p-6 space-y-2 text-gray-700 text-md xl:text-lg">
-                            <li class="flex items-start gap-2"><span class="text-red-400">✔</span>Lorem Ipsum dolor sit amet </li>
-                            <li class="flex items-start gap-2"><span class="text-red-400">✔</span>Lorem Ipsum dolor sit amet </li>
-                            <li class="flex items-start gap-2"><span class="text-red-400">✔</span>Lorem Ipsum dolor sit amet </li>
-                            <li class="flex items-start gap-2"><span class="text-red-400">✔</span>Lorem Ipsum dolor sit amet </li>
-                            <li class="flex items-start gap-2"><span class="text-red-400">✔</span>Lorem Ipsum dolor sit amet </li>
-                            <li class="flex items-start gap-2"><span class="text-red-400">✔</span>Lorem Ipsum dolor sit amet </li>
-                        </ul>
-                    </div>
-                @endforelse
-            </div>
-
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                @forelse ($topic->where('id', '>', 3) as $t)
+                @forelse ($topic->where('id', '>', 0) as $t)
                     <div class="rounded-2xl overflow-hidden shadow-lg hover:shadow-xl bg-white/90 hover:bg-white backdrop-blur-sm transition transform hover:-translate-y-1">
                         <!-- Card Header -->
                         <h3 class="text-xl xl:text-2xl font-bold text-white p-4 
@@ -82,6 +21,7 @@
                         </h3>
                         <!-- Card Body -->
                         <div class="p-6 text-gray-700">
+                            <p>Topics of interest include, but are not limited to:</p>
                             <ul class="space-y-2 text-gray-700 text-md xl:text-lg">
                                 @foreach ($t->list as $item)
                                     <li class="flex items-start gap-2"><span class="text-red-400    ">✔</span> {!! $item !!}</li>
@@ -119,41 +59,6 @@
                     </div>
                 @endforelse
             </div>
-
-            {{-- <div class="grid grid-cols-1 gap-8">
-                @forelse ($topic->where('id', '>', 5) as $t)
-                    <div class="rounded-2xl overflow-hidden shadow-lg hover:shadow-xl bg-white/90 hover:bg-white backdrop-blur-sm transition transform hover:-translate-y-1">
-                        <!-- Card Header -->
-                        <h3 class="text-xl xl:text-2xl font-bold text-white p-4 
-                                   {{ $t->id % 2 === 1 ? 'bg-gradient-to-r from-red-600 to-red-500' : 'bg-gradient-to-r from-gray-800 to-gray-700' }}">
-                            {{ $t->title }}
-                        </h3>
-                        <!-- Card Body -->
-                        <div class="p-6 text-gray-700">
-                            <ul class="space-y-2 text-gray-700 text-md xl:text-lg">
-                                @foreach ($t->list as $item)
-                                    <li class="flex items-start gap-2"><span class="text-red-400">✔</span> {!! $item !!}</li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    </div>
-                @empty
-                    <!-- Contoh Default Card -->
-                    <div class="rounded-2xl overflow-hidden shadow-lg bg-white/90 backdrop-blur-sm border border-gray-200">
-                        <h3 class="text-xl xl:text-2xl font-bold text-white bg-gradient-to-r from-gray-800 to-gray-700 p-4">
-                            Lorem Ipsum
-                        </h3>
-                        <ul class="p-6 space-y-2 text-gray-700 text-md xl:text-lg">
-                            <li class="flex items-start gap-2"><span class="text-red-400">✔</span>Lorem Ipsum dolor sit amet </li>
-                            <li class="flex items-start gap-2"><span class="text-red-400">✔</span>Lorem Ipsum dolor sit amet </li>
-                            <li class="flex items-start gap-2"><span class="text-red-400">✔</span>Lorem Ipsum dolor sit amet </li>
-                            <li class="flex items-start gap-2"><span class="text-red-400">✔</span>Lorem Ipsum dolor sit amet </li>
-                            <li class="flex items-start gap-2"><span class="text-red-400">✔</span>Lorem Ipsum dolor sit amet </li>
-                            <li class="flex items-start gap-2"><span class="text-red-400">✔</span>Lorem Ipsum dolor sit amet </li>
-                        </ul>
-                    </div>
-                @endforelse
-            </div> --}}
         @endif
     </div>
 
