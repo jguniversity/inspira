@@ -11,7 +11,7 @@
 
         <!-- Topics Grid -->
         @if ($topic)
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 @forelse ($topic->where('id', '>', 0) as $t)
                     <div class="rounded-2xl overflow-hidden shadow-lg hover:shadow-xl bg-white/90 hover:bg-white backdrop-blur-sm transition transform hover:-translate-y-1">
                         <!-- Card Header -->

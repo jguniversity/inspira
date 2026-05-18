@@ -65,7 +65,7 @@ class DatabaseSeeder extends Seeder
                 'Strategic Forum',
                 'Discipline-Based Seminars (Parallel Sessions)',
             ]),
-            'venue' => 'Jakarta Global University Ballroom | Wednesday, October 28, 2026',
+            'venue' => 'Jakarta Global University Ballroom | Wednesday, October 24, 2026',
         ]);
 
         Agenda::insert([
