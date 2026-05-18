@@ -145,7 +145,7 @@ class DatabaseSeeder extends Seeder
             [
                 'description' => '-',
                 'agenda' => 'Conference Date',
-                'timeline' => 'October 28, 2026',
+                'timeline' => 'October 24, 2026',
                 'order' => 7
             ],
         ]);
@@ -180,6 +180,16 @@ class DatabaseSeeder extends Seeder
                     'Leadership, Innovation Management, and Corporate Strategy',
                     'Pharmaceutical formulation, biotechnology, and drug design',
                     'Herbal technology, pharmacology, and regulatory compliance',
+                ]),
+            ],
+            [
+                'title' => 'Pharmaceutical',
+                'list' => json_encode([
+                    'Advancing Pharmaceutical Innovation through Drug Discovery, Molecular Engineering, and Smart Delivery Technologies',
+                    'Advancing Precision Healthcare through Artificial Intelligence and Emerging Medical Technologies',
+                    'Advancing Regulatory Science for Safe, Effective, and High-Quality Healthcare Products',
+                    'Optimizing Therapeutic Outcomes through Personalized and Precision Clinical Pharmacy',
+                    'Innovations in Smart Drug Delivery, Natural Products, and Next-Generation Biopharmaceuticals',
                 ]),
             ],
         ]);
