@@ -49,15 +49,15 @@
                 <li><a class="block px-4 py-2 rounded-md text-gray-600 hover:bg-gray-100" href="@if (!Route::is('main')) {{ route('main') }}#agenda @else #agenda @endif">Agenda</a></li>
                 <li><a class="block px-4 py-2 rounded-md text-gray-600 hover:bg-gray-100" href="@if (!Route::is('main')) {{ route('main') }}#topics @else #topics @endif">Topics</a></li>
                 <li><a class="block px-4 py-2 rounded-md text-gray-600 hover:bg-gray-100" href="@if (!Route::is('main')) {{ route('main') }}#category @else #category @endif">Category</a></li>
-                <li><a class="block px-4 py-2 rounded-md text-gray-600 hover:bg-gray-100" href="@if (!Route::is('main')) {{ route('main') }}#faqs @else #faqs @endif">FAQs</a></li>
+                <!-- <li><a class="block px-4 py-2 rounded-md text-gray-600 hover:bg-gray-100" href="@if (!Route::is('main')) {{ route('main') }}#faqs @else #faqs @endif">FAQs</a></li> -->
             </ul>
         </li>
         <!-- Awards -->
-        <li class="hidden xl:inline py-2">
+        <!-- <li class="hidden xl:inline py-2">
             <a class="text-base text-gray-600 hover:text-black font-medium transition" 
                 href="@if (!Route::is('main')) {{ route('main') }}#awards @else #awards @endif">Awards
             </a>
-        </li>
+        </li> -->
         <!-- Fee -->
         <li class="hidden xl:inline py-2">
             <a class="text-base text-gray-600 hover:text-black font-medium transition" 

@@ -178,8 +178,6 @@ class DatabaseSeeder extends Seeder
                     'Sustainability, ESG, and Green Business Practices',
                     'Marketing and Consumer Behaviour in the Digital Age',
                     'Leadership, Innovation Management, and Corporate Strategy',
-                    'Pharmaceutical formulation, biotechnology, and drug design',
-                    'Herbal technology, pharmacology, and regulatory compliance',
                 ]),
             ],
             [
