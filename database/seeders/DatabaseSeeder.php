@@ -169,7 +169,7 @@ class DatabaseSeeder extends Seeder
                 ]),
             ],
             [
-                'title' => 'Business and Pharmaceutical Sciences',
+                'title' => 'Economics & Business',
                 'list' => json_encode([
                     'Business and Entrepreneurship in the Tech Era',
                     'Tech-Driven Business Strategies and Economic Sustainability',
