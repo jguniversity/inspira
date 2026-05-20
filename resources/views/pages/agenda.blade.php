@@ -26,13 +26,13 @@
                     from academia, industry, and government. This forum aims to reinforce collaboration among key
                     stakeholders in building a sustainable innovation ecosystem. Through panel discussions, interactive
                     sessions, and the exchange of best practices, the forum will explore strategic pathways to drive
-                    knowledge- and technology-based economic development.</p>
+                    knowledge and technology based economic development.</p>
             </div>
             <h3 class="font-bold text-2xl text-gray-600 text-start my-4"><u>Keynote Speaker:</u></h3>
             <!-- keynote Grid -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
                 <!-- Contoh Default Card -->
-                <div class="rounded-2xl overflow-hidden shadow-lg bg-white/90 backdrop-blur-sm border border-gray-200">
+                <div class="">
                     <ul class="p-6 space-y-2 text-gray-700 text-md xl:text-lg">
                         <div class="relative flex flex-col items-center justify-center h-full">
                             <div
@@ -44,7 +44,7 @@
                         </div>
                     </ul>
                 </div>
-                <div class="rounded-2xl overflow-hidden shadow-lg bg-white/90 backdrop-blur-sm border border-gray-200">
+                <div class="">
                     <ul class="p-6 space-y-2 text-gray-700 text-md xl:text-lg">
                         <div class="relative flex flex-col items-center justify-center h-full">
                             <div
@@ -56,7 +56,7 @@
                         </div>
                     </ul>
                 </div>
-                <div class="rounded-2xl overflow-hidden shadow-lg bg-white/90 backdrop-blur-sm border border-gray-200">
+                <div class="">
                     <ul class="p-6 space-y-2 text-gray-700 text-md xl:text-lg">
                         <div class="relative flex flex-col items-center justify-center h-full">
                             <div
