@@ -9,14 +9,96 @@
             <div class="w-32 h-1 bg-gradient-to-r from-red-600 to-red-400 rounded-full"></div>
         </div>
 
+        <div class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 text-red-600">
+                <path
+                    d="M3.478 2.404a.75.75 0 0 0-.926.941l2.432 7.905H13.5a.75.75 0 0 1 0 1.5H4.984l-2.432 7.905a.75.75 0 0 0 .926.94 60.519 60.519 0 0 0 18.445-8.986.75.75 0 0 0 0-1.218A60.517 60.517 0 0 0 3.478 2.404Z" />
+            </svg>
+            <h3 class="font-bold text-2xl lg:text-3xl text-gray-600 text-start">1. Strategic Forum</h3>
+        </div>
+        <div class="flex flex-col items-center">
+            <div class="flex flex-col  text-gray-600 text-base xl:text-lg max-w-5xl text-justify">
+                <p>The highlight agenda is the <b>Strategic Forum titled "Bridging engineering, business, and
+                        pharmaceutical
+                        expertise to advance technological innovation for global impact"</b>, which brings together
+                    thought
+                    leaders
+                    from academia, industry, and government. This forum aims to reinforce collaboration among key
+                    stakeholders in building a sustainable innovation ecosystem. Through panel discussions, interactive
+                    sessions, and the exchange of best practices, the forum will explore strategic pathways to drive
+                    knowledge- and technology-based economic development.</p>
+            </div>
+            <h3 class="font-bold text-2xl text-gray-600 text-start my-4"><u>Keynote Speaker:</u></h3>
+            <!-- keynote Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
+                <!-- Contoh Default Card -->
+                <div class="rounded-2xl overflow-hidden shadow-lg bg-white/90 backdrop-blur-sm border border-gray-200">
+                    <ul class="p-6 space-y-2 text-gray-700 text-md xl:text-lg">
+                        <div class="relative flex flex-col items-center justify-center h-full">
+                            <div
+                                class="w-50 h-50 rounded-full bg-white flex items-center justify-center shadow-lg ring-2 ring-white/70">
+                                <img src="{{ asset('images/user.png') }}" alt="icon" class="w-50">
+                            </div>
+                            <h2 class="mt-3 text-lg font-bold drop-shadow">Wuxi University of Technology</h2>
+                            {{-- <small><i>Rektor xxx</i></small> --}}
+                        </div>
+                    </ul>
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-lg bg-white/90 backdrop-blur-sm border border-gray-200">
+                    <ul class="p-6 space-y-2 text-gray-700 text-md xl:text-lg">
+                        <div class="relative flex flex-col items-center justify-center h-full">
+                            <div
+                                class="w-50 h-50 rounded-full bg-white flex items-center justify-center shadow-lg ring-2 ring-white/70">
+                                <img src="{{ asset('images/user.png') }}" alt="icon" class="w-50">
+                            </div>
+                            <h2 class="mt-3 text-lg font-bold drop-shadow">Jakarta Global University</h2>
+                            {{-- <small><i>Rektor xxx</i></small> --}}
+                        </div>
+                    </ul>
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-lg bg-white/90 backdrop-blur-sm border border-gray-200">
+                    <ul class="p-6 space-y-2 text-gray-700 text-md xl:text-lg">
+                        <div class="relative flex flex-col items-center justify-center h-full">
+                            <div
+                                class="w-50 h-50 rounded-full bg-white flex items-center justify-center shadow-lg ring-2 ring-white/70">
+                                <img src="{{ asset('images/user.png') }}" alt="icon" class="w-50">
+                            </div>
+                            <h2 class="mt-3 text-lg font-bold drop-shadow">China Industry</h2>
+                            {{-- <small><i>Rektor xxx</i></small> --}}
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 text-red-600">
+                <path
+                    d="M3.478 2.404a.75.75 0 0 0-.926.941l2.432 7.905H13.5a.75.75 0 0 1 0 1.5H4.984l-2.432 7.905a.75.75 0 0 0 .926.94 60.519 60.519 0 0 0 18.445-8.986.75.75 0 0 0 0-1.218A60.517 60.517 0 0 0 3.478 2.404Z" />
+            </svg>
+            <h3 class="font-bold text-2xl lg:text-3xl text-gray-600 text-start">2. Discipline-Based Seminars (Parallel
+                Sessions)</h3>
+        </div>
+        <div class="flex flex-col items-center">
+            <div class="flex flex-col  text-gray-600 text-base xl:text-lg max-w-5xl text-justify">
+                <p>In addition to the strategic forum, the conference features discipline-based seminars conducted in
+                    parallel sessions. These seminars provide a platform for researchers, academics, and practitioners
+                    to present their latest research findings and innovations within their respective fields, including
+                    engineering (mechanical, electrical, industrial, civil, and informatics), business and economics,
+                    and health sciences/pharmacy. Each session encourages scholarly discussion, constructive feedback,
+                    and interdisciplinary exchange, fostering academic rigor and collaboration across diverse areas of
+                    expertise.</p>
+            </div>
+        </div>
+
+
         <!-- Description -->
         <div class="flex flex-col items-center">
-            <div class="text-gray-600 text-base xl:text-lg max-w-5xl text-justify">
+            {{-- <div class="text-gray-600 text-base xl:text-lg max-w-5xl text-justify">
                 {!! $agendaTitle->description ?? '-' !!}
-            </div>
+            </div> --}}
 
             <!-- Agenda Table -->
-            <div class="w-full max-w-5xl mt-10">
+            <div class="w-full max-w-5xl">
                 <p class="text-gray-800 font-semibold text-base xl:text-xl flex items-center gap-2 mb-3">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5">
                         <path
